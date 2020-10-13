@@ -1,0 +1,37 @@
+Estas notas corresponden a la Clase "Curso de Introducción al Pensamiento computacional con Python"
+- [x]  Introducción al pensamiento computacional
+- [x]  Introducción al cómputo
+- [x]  Introducción a los lenguajes de programación
+- [x]  Preparación de tu computadora
+- [x]  Elementos básicos de Python
+- [x]  Asignación de variables
+- [x]  Cadenas y entradas
+- [x]  Programas ramificados
+- [x]  Iteraciones
+- [x]  Bucles for
+- [x]  Representación de flotantes
+- [x]  Enumeración exhaustiva
+        - Tambien llamados "Adivina y verifica"
+        - Computador Actuales son muy rapidas 
+        - a punta de busqueda permite generar una solcuón en base a fuerza bruta 
+        - es inneficiente en varios aspectos pero es una de las manera de encontrar solución a algoritomos
+- [ ]  Aproximación de soluciones
+        - 
+- [ ]  Búsqueda Binaria
+- [ ]  Funciones y abstracción
+- [ ]  Scope o Alcance
+- [ ]  Especificaciones del código
+- [ ]  Recursividad
+- [ ]  Fibonnacci y la Recursividad
+- [ ]  Funciones como objetos
+- [ ]  Tuplas
+- [ ]  Rangos
+- [ ]  Listas y mutabilidad
+- [ ]  Diccionarios
+- [ ]  Pruebas de caja negra
+- [ ]  Pruebas de caja de cristal
+- [ ]  Debugging
+- [ ]  Manejo de excepciones
+- [ ]  Excepciones y control de flujo
+- [ ]  Afirmaciones
+- [ ]  Conclusiones
