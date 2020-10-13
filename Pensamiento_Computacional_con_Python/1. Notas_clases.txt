@@ -13,20 +13,106 @@ Estas notas corresponden a la Clase "Curso de Introducción al Pensamiento compu
 - [x]  Enumeración exhaustiva
         - Tambien llamados "Adivina y verifica"
         - Computador Actuales son muy rapidas 
-        - a punta de busqueda permite generar una solcuón en base a fuerza bruta 
-        - es inneficiente en varios aspectos pero es una de las manera de encontrar solución a algoritomos
-- [ ]  Aproximación de soluciones
-        - 
-- [ ]  Búsqueda Binaria
-- [ ]  Funciones y abstracción
-- [ ]  Scope o Alcance
-- [ ]  Especificaciones del código
-- [ ]  Recursividad
-- [ ]  Fibonnacci y la Recursividad
-- [ ]  Funciones como objetos
-- [ ]  Tuplas
-- [ ]  Rangos
+        - A punta de busqueda permite generar una solcuón en base a fuerza bruta 
+        - Es inneficiente en varios aspectos pero es una de las manera de encontrar solución a algoritomos
+        - Necesario para computer science
+- [x]  Aproximación de soluciones
+        - similas a Enumeración exhaustiva, pero no necesita una respuesta exacta 
+        - podemos apoximas soluciones con un margen de error que llamaremos epsilon
+        - Epsilon  es un proceso lento si se quiere ser precisos 
+        - Funcion ABS (valor absoluto)
+        - Ejercicio de 5.aproximación.py de ejemplo
+- [x]  Búsqueda Binaria
+        - cuando la respuesta se encuentra conjunto ordenado, podemos utilizar búsqueda binaria
+        - es altamente eficiente, pues corta el espacio de busqueda en dos por cada ioteracion
+        - en base a trabajar con ambos extermos permite a epsilon trabajar mas rapido 
+        - independiente de numeros muy grande trabaja de manera extremadamente eficiente 
+        - metodo llamado bisección 
+        - ejercicio de 6.busqueda-binaria.py de ejemplo
+- [x]  Funciones y abstracción
+        - abstraccion: no se necesita conocer el funcionamiento de un sistema para poder ocuparlo (ej: Calculadora)
+        - nosotros como cientificos informaticos creamos abstracciones, por ejemplo apache 
+        - decomposicion: se puede pensar como un mini programa dentro de un programa mayor 
+        - keywords o o como se define una funcion 
+                def <nombre>(<parametros>):
+                <cuerpo>
+                return <expresion>]:
+
+                def suma (a,b):
+                total =a+b
+                return total
+                
+                suma (2,3)
+        argumentos
+        - keywords 
+                def nombre_completo(nombre,appellido,inverso=false ):
+                        if inverso:
+                                return (f'{nombre} {appellido})
+                        else:
+                                return (f'{nombre} {apellidop}')
+                nombre_completo ('david','aoresti')
+                nombre_completo ('david','aoresti', inverso=true)
+                nombre_completo (apellido='aoresti', nombre='david')
+        reto eleccion 7.1
+- [x]  Scope o Alcance
+        - alcance:
+                - en funciones permite pasar funciones completas 
+                - entra en un nuevo contexto de ejecución 
+                - forma de verlo (Frames)
+                - son varias capas que se crean encima mientras que se van cargando
+- [x]  Especificaciones del código
+                - Docstrig
+                - String de muchas lineas """
+                - Primero se da una descripción clara y concisa de la función y su funcionamiento
+                - En medio se agrega la descripción de los diferentes parámetros, su tipo, su nombre y que es lo que se espera de esos parámetros
+                - Por ultimo se agrega que es lo que devuelve nuestra función
+                - help (def) para revisar la documentación
+- [x]  Recursividad
+                - Algoritmica o programatica 
+                - algoritmica una forma de crear soluciones utilizando el principio de "Divide y venceras"
+                - programatica una tecnica programatica mediante la cual una funcion se llame a si misma 
+                - Factoriales 
+                        - recursividad es simplemente un loop como en un while 
+                        - se vuelve a llamar siempre ella misma 
+- [x]  Fibonnacci y la Recursividad
+                - codigo de ejemplo 9.fibonnaci.py
+- [x]  Funciones como objetos
+                - Una de las características más poderosas de Python es que todo es un objeto, incluyendo las funciones. Las funciones en Python son “ciudadanos de primera clase”.                - Esto, en sentido amplio, significa que en Python las funciones:
+                - Tienen un tipo
+                - Se pueden pasar como argumentos de otras funciones
+                - Se pueden utilizar en expresiones
+                - Se pueden incluir en varias estructuras de datos (como listas, tuplas,
+                - diccionarios, etc.)
+- [x]  Tuplas
+                - son secuencias inmutables de Objetos 
+                - a diferencia de las cadenas pueden contener cualquier tipo de objeto
+                - puede utilizarse para devolver varios valores en una funcion
+                - estructura :
+                        tuple_name = ('first_value', 2, 'u_can_add_ints')
+                        a diferencia de las listas 
+                        list_name = [1,'2', 3]
+                - Se pueden sumas tuplas1 +=tupla2 =new tupla2
+                -  desempaquetar 
+- [x]  Rangos
+                - representan una secuencia de enteros 
+                - range (comienzo,fin,pasos)
+                - al igual que las cadenas y las tuplas, los rangos son inmutables.
+                - muy eficientes en uso de memoria y normalmente utilizados en for loops 
+                - nos genera un secuencia de enteros 
 - [ ]  Listas y mutabilidad
+                - las listas son secuencias de objetos, pero a diferencia de las tuplas si son mutables.
+                - cuando modificas una lista puede existir efectos secundarios (side effects)
+                - es posible iterar con ellas 
+                - para modificar una lista podemos 
+                        asignar via indice (my_list[0]=5)
+                        utilizar los metodos de la lista (append,pop,remove,insert,etc )
+                Clonacion
+                        - Casi siempre es mejor clonar una lista en vez de mutarla 
+                        - para clonar una lista podemos utilizar rebanadas (slices) o la funcion list_name
+                List comprehension
+                        - Es una forma concisa de aplicar operaciones a los valores de una secuencia.
+                        - tambien se pueden aplicar condiciones para filtrar
+                        
 - [ ]  Diccionarios
 - [ ]  Pruebas de caja negra
 - [ ]  Pruebas de caja de cristal
