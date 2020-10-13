@@ -99,7 +99,7 @@ Estas notas corresponden a la Clase "Curso de Introducción al Pensamiento compu
                 - al igual que las cadenas y las tuplas, los rangos son inmutables.
                 - muy eficientes en uso de memoria y normalmente utilizados en for loops 
                 - nos genera un secuencia de enteros 
-- [ ]  Listas y mutabilidad
+- [x]  Listas y mutabilidad
                 - las listas son secuencias de objetos, pero a diferencia de las tuplas si son mutables.
                 - cuando modificas una lista puede existir efectos secundarios (side effects)
                 - es posible iterar con ellas 
@@ -112,12 +112,59 @@ Estas notas corresponden a la Clase "Curso de Introducción al Pensamiento compu
                 List comprehension
                         - Es una forma concisa de aplicar operaciones a los valores de una secuencia.
                         - tambien se pueden aplicar condiciones para filtrar
-                        
-- [ ]  Diccionarios
-- [ ]  Pruebas de caja negra
-- [ ]  Pruebas de caja de cristal
-- [ ]  Debugging
-- [ ]  Manejo de excepciones
-- [ ]  Excepciones y control de flujo
-- [ ]  Afirmaciones
-- [ ]  Conclusiones
+
+- [x]  Diccionarios
+                - Los diccionarios son como listas pero en lugar de usar indices utilizan llaves.
+                - no tienen orden interno 
+                - los diccionarios son mutables 
+                - pueden iterarse 
+
+- [x]  Pruebas de caja negra
+                - se basan en la especificacion de la funcion o el programa 
+                - prueba inputs y valida outputs 
+                - unit testing o integration testing 
+                - clase ejemplo 11. caja_negra.py
+- [x]  Pruebas de caja de cristal
+                - se basan en el flujo del programa 
+                - prueba todos los caminos posibles de una funcion. ramificaciones,bucles, for y while , recursion
+                - regression testing o mocks 
+                - ejercio ejemplo 12.caja_cristal.py
+                
+- [x]  Debugging
+                - no te molestes con os debugger aprende a utilizar statement.
+                - estudia los datos disponibles 
+                - utiliza los datos para crear hipotesis y experimentos. Metodo cientificos
+                - ten mente abierta. si entendieras el programa probablemente no habrian bugs 
+                - lleva un registro de lo que has tratado, preferentemente en forma de test.
+                - Diseña experimentos.
+                        - print stateman 
+                        - busqueda binaria 
+                - Errores comunes 
+                        -Encuentra a los sospechosos comunes 
+                        - en lugar de preguntartye por que un programa no funciona , preguntate por que esta funcionando de esta manera.
+                        - es posible que el bug no se encuentre donde crees que esta 
+                        - explicale el problema a otra persona. de preferencia que no tenga contextp.
+                        - lleva un registro de lo que has tratado, preferentemente en la forma de test
+                        - vete a dormir.
+                        - no te rindas y no te frustes 
+- [x]  Manejo de excepciones
+                        - son muy comunes en la programación, no tienen nada de excepcional
+                        - las excepciones de python normalmente se relacionan con errores de semantica.
+                        - se pueden crear excepciones propias 
+                        - cuando una excepcion no se maneja (unhandled exception), el programa termina en error.
+                        como se manejan las excepciones 
+                                - las exception se manejan con los keywords:
+                                        -try, except,finally
+                                - se pueden utilizar tambien para ramificar programas.
+                                no deben manejarse de manera silenciosa , son print staments
+                                - para aventar tu propia exception utiliza el keyword raise 
+                        - Ejercicio de clase 13.exception (try and except)
+- [x]  Excepciones y control de flujo
+                        - El principio EAFP es un estilo de programación común en Python en el cual se asumen llaves, índices o atributos válidos y se captura la excepción si la suposición resulta ser falsa. Es importante resaltar que otros lenguajes de
+                           programación favorecen el principio LBYL (look before you leap, revisa antes de saltar) en el cual el código verifica de manera explícita las precondiciones antes de realizar llamadas.
+- [x]  Afirmaciones
+                        - programacion defensiva
+                        - pruede utilizarse para verificar que los tipos sean correctos en una funcion 
+                        - tambien sirve para debbugear
+                        - assert
+- [x]  Conclusiones
