@@ -1,0 +1,189 @@
+Profesor Ricardo Celis (algunos datos que explica [Lenguaje C]no tienen relevancia con lo estudiado en Road to Code )
+Estos apuntes corresponden al Curso Básico de Algoritmos:
+- [x]  Introducción al curso básico de algoritmos y estructuras de datos
+            - Datos de introducción correspondiente a la clase.
+                Con la programación orientada a objetos podemos hacer una abstracción de cualquier cosa que queramos crear, por ejemplo, un vídeo juego de fútbol, y esta se llamara CLASE la cual se compone de dos cosas: ATRIBUTOS Y MÉTODOS.
+                ATRIBUTOS: son todas las propiedades que corresponden al jugador
+                MÉTODOS: son todas las acciones que tiene que hacer el jugador
+                QUE ES UN OBJETO: es la base de la programación orientada a objetos, los objetos son las instancias de la clase, eso quiere decir que la clase será el molde del objeto, o sea que con la clase que es el molde del jugador, podemos crear muchos jugadores diferentes.
+                HERENCIA: esto nos ayudara a crear nuevas clases a partir de otra clase, las clases pueden tener características parecidas entre sí.
+                ENCAPSULAMIENTO: puede significar esconder algo, por ejemplo, si en el vídeo juego queremos esconder la velocidad con la que corre un jugador para que los otros jugadores no puedan verla.
+                POLIMORFISMO: significa muchas formas. También es una base importante de la programación y lista de objetos, por ejemplo, el entrenador puede enviarle un msj a un jugador y este saldría al campo a jugar y a realizar lo que entendió del mensaje
+- [x]  ¿Qué entiende una computadora?
+            -  Explicación didactica de la historia de las computadoras 
+- [x]  Lenguajes de programación
+            - Que es el lenguaje de programación
+                - Maquina y ensamblador 
+            - Lenguaje alto nivel y bajo nivel
+- [x]  Estructuras de datos
+            - PUNTOS CLAVES:
+            -Los programas siempre van a estar trabajando con información
+                Un dato es el ladrillo de lo que llamamos información
+                Una estructura de datos es la manera en la que organizamos esos ladrillos para alcanzar nuestros objetivos y resolver nuestros problemas
+                Piensa en las estructuras de datos
+            - Tiene dos grandes familias de estructuras de datos:
+                lineales
+                    –la informacion se guarda en una secuencia lineal
+                No lineales
+                    - la informacion se guarda en secuencias independientes e interconectadas
+            –arboles
+            –grafos
+- [x]  ¿Qué es un algoritmo?
+        |   - Un algoritmo es un conjunto de intrucciones que resuelven un problema dado paso a pas y sin generar ambiguedad.
+            - no debe cambiar en el tiempo (sin cambios en los resultados ej 5+5=10 siempre)
+            - Las características fundamentales que debe cumplir todo algoritmo son:
+                    Un algoritmo debe ser preciso e indicar el orden de realización de cada paso.
+                    Un algoritmo debe estar definido. Si se sigue un algoritmo dos veces, se debe obtener el mismo resultado cada vez.
+                    Un algoritmo debe ser finito. el algoritmo se debe terminar en algún momento; o sea, debe tener un número finito de pasos.
+                    Un algoritmo debe ser legible: El texto que lo describe debe ser claro, tal que permita entenderlo y leerlo fácilmente.
+            - Pendiente la Lectura de Guixtra(busqueda de ruta mas corta)
+- [x]  Metodología para la construcción de un algoritmo
+            - Definición de algoritmo 
+                ¿Qué problema quiero resolver?
+                ¿Que resultado quiero lograr?
+                ¿Que quiero especficamente? Visualizalo       
+            - Análisis del problema 
+                ¿Qué necesito para alcanzar ese resultado?
+                ¿Cómo obtengo eso que necesito?
+            - Diseño de algoritmo
+                Escribe el codigo paso a paso para alcanzar el resultado
+            - Verificación o pruebas 
+                Genialllllllll
+                ¿Es reutilizable, efectivo este codigo?
+                ¿Como lo puedo mejorar?
+            No consegui el resultado:
+                Visualiza el paso a paso en tu mente (a veces da pereza lo es, a mi tambien pero hazlo)
+                ¿Que me falta?
+                ¿Que hice mal?
+                ¿Donde esta el error?
+                ¿Que necesito cambiar?                
+- [x]  Variables y tipos de datos
+- [x]  User defined data types
+            - Definiciones 
+- [x]  Instalando Ubuntu Bash en Windows
+            - Instalado desde antes 
+- [x]  Creando nuestro user defined data type
+            -
+- [x]  Abstract Data Types básicos: Lists, Stacks, Queues
+            - Un tipo de dato abstracto (ADT) representa un set particular de comportamientos 
+                podemos definir con precision lo que hara un ADT 
+                    un Stacks es una lista que implementa una politica LIFO en elemtnos agregados y eliminados 
+            - Una estructura de datos es mas concreta. Tipicamente es una tecnica o estrategia para implementar una ADT
+                por ejemplo podemos utilizar una LINKED List o un array (estructura de datos ) para implementar un Stacks (ADT)
+            - Algunos de los ADT más comunes que debes conocer como programados son: 
+                -Stacks(pila),Queue (COLA), Priority Queue (cola de prioridades), diccionarios, Trees (arboles), graphs (grafos).
+            - Algunas de las estructuras de datos usadas para implementar esos ADTS son:
+                - Arrays, LINKED List, hash tables 
+                - Trees
+            - Stack (Pila): Su comportamiento es LIFO (Last In First Out), Último en Entrar, Primero en Salir.
+            - Queue (Cola) : Su comportamiento es FIFO (First In, First Out), Primero en Entrar, Primero en Salir.
+- [x]  Explicación gráfica Data Types básicos
+            - Dibujo explicado en clase 
+- [x]  Glosario de funciones para Abstract Data Types
+            List ADT
+            Una lista es un tipo de datos abstracto utilizado para representar un número contable de valores ordenados. El mismo valor puede existir más de una vez, esta es la implementación computacional del concepto matemático de secuencia finita, la lista.
+            A continuación te comparto las operaciones disponibles en este ADT:
+                get() – Retorna un elemento de la lista en cualquier posición especificada.
+                insert() – Inserta un elemento en cualquier posición de la lista.
+                remove() – Remueve la primera aparición de cualquier elemento en una lista no-vacía.
+                removeAt() – Remueve el elemento que se encuentre en la posición especificada en una lista que no esté vacía.
+                replace() – Reemplaza un elemento en cualquier posición por otro elemento.
+                size() – Retorna el número de elementos contenidos en la lista.
+                isEmpty() – Retorna true si la lista está vacía, si no, regresa false.
+                isFull() – Retorna true si la lista está llena, si no, regresa false.
+            Stack ADT
+            Un Stack es un tipo de datos abstracto que sirve como una colección de elementos con dos operaciones principales:
+            Push: agrega un elemento a la colección
+            Pop remueve el elemento que se añadió más recientemente y que no ha sido removido, el orden en el que esto funciona como hemos visto en clases sigue la lógica LIFO (last in, first out) que en español sería “último o más reciente en entrar, primero en salir”
+            A continuación te comparto las operaciones disponibles en este ADT:
+                push() – Inserta un elemento en un extremo de la pila denominado “cima”.
+                pop() – Remueve y retorna el elemento en la cima de la pila, si el stack no está vació.
+                peek() – Retorna el elemento en la cima del stack sin removerlo, si el stack no está vacío.
+                size() – Retorna el número de elementos en el stack.
+                isEmpty() – Retorna true si el stack está vacío, si no, retorna false.
+                isFull() – Retorna true si la lista está llena, si no, regresa false.
+            Queue ADT
+            Una cola es un ADT que sirve para almacenar datos en el orden en el que los datos van llegando, sigue una lógica del tipo FIFO o “primero en llegar, primero en salir” como es en la mayoría de supermercados.
+            A continuación te comparto las operaciones disponibles en este ADT:
+                enqueue() – Inserta un nuevo elemento al final de la cola.
+                dequeue() – Remueve y retorna el primer elemento de la cola si la cola no está vacía.
+                peek() – Retorna el primer elemento de la cola sin removerlo.
+                size() – Retorna el número de elementos almacenados en la cola.
+                isEmpty() – Retorna true si la cola está vacía, si no, retorna false.
+                isFull() – Retorna true si la cola está vacía, si no, retorna false.
+- [x]  Clases y objetos
+            - Anncode Explica como funciona clases y objetos desde la perspectiva delñ futbol 
+- [ ]  Creando tu primera Queue: Arrays
+            - Visualización
+- [ ]  Creando tu primera Queue: implementación.
+            - ejercicio queue.c
+- [ ]  Creando tu primera Queue: implementar la función enQueue
+            - ejercicio queue.c
+- [ ]  Creando tu primera Queue: implementar la función deQueue
+            - Ejercicio queue.c 
+- [ ]  Creando tu primera Queue: main code
+- [ ]  Algoritmos de ordenamiento
+            - ALGORITMOS DE ORDENAMIENTO:
+            Es un algoritmo que se encarga de colocar en orden una secuencia dada y pueden ser números o letras.
+            Un arreglo ordenado es un arreglo que tiene un orden específicamente definido. Ej. [a,b,c,d] = arreglo ordenado alfabéticamente, o [1,2,3,4,5] arreglo de números ordenados de menor a mayor.
+            Tu puedes programar el control y orden de mayor a menos o de la letra A – Z o viceversa.
+            Además, el algoritmo de ordenamiento te da unos pasos a seguir para que el orden que buscas se logre.
+            ALGORITMOS DE ORDENAMIENTO MAS UTILIZADOS:
+            MERGE SORT: principio divide y vencerás, este método agarra el array y los separa y va resolviendo problemas pequeños e individuales, después ordena y asegura de que halla quedado bien y es un proceso rápido.
+                Es convenible utilizarlo cuando se tienen demasiados datos y no pocos.
+            INSERTION SORT:
+                Es mas básico, va comparando valores y los va colocando lo valores mas pequeños al lado izquierdo. Este algoritmo es muy fácil de implementar.
+            BUBBLE SORT:    
+                Es un elemento básico, se encarga de comparar por pares y repite la secuencia hasta terminar, se utiliza mas en pocos datos para que sea más eficiente.
+            QUICK SORT:
+                Va a dividir en problema en dos y así mismo va a ir ordenando el problema, es un algoritmo mas eficiente que la mayoría, es muy bueno en comparación de los demás.
+                S Y N:
+                Son datos que vamos a estar utilizando a menudo cuando estas leyendo o investigando.
+                S= va a ser la secuencia de objetos ordenables (los números a ordenar).
+                N= numero de elementos en S (secuencia de elementos a ordenar).
+- [ ]  Bubble sort
+- [ ]  Bubble sort: implementación
+- [ ]  Bubble sort: main code
+- [ ]  Insertion sort
+- [ ]  Desafío: implementa un algoritmo de ordenamiento
+- [ ]  Recursividad
+            - 
+- [ ]  La función factorial, calculando el factorial recursivamente
+- [ ]  Manejo de cadenas de caracteres
+- [ ]  Arte: Generando arte recursivo
+            - arte.py
+- [ ]  Divide and conquer (divide y vencerás)
+            Dividir, Conquistar y Combinar
+                Dividir: Tomar un problema grande en subproblemas
+                Conquistar: Resolver cada uno de los subproblemas
+                Combinar: Unir apropiadamente las respuestas
+- [ ]  Qué es la programación dinámica (divide y vencerás 2.0)
+- [ ]  MergeSort
+- [ ]  Desafío: Buscar el algoritmo más rápido de sort
+- [ ]  Implementando QuickSort con Python
+- [ ]  Implementando QuickSort con Python: main code
+- [ ]  Qué son los Greedy Algorithm
+- [ ]  Ejercicio de programación greedy
+- [ ]  Ejercicio de programación greedy: main code
+- [ ]  Grafos y sus aplicaciones
+- [ ]  Árboles
+- [ ]  Cómo comparar algoritmos y ritmo de crecimiento
+            - ++Tipos de análisis de ejecución de un programa: ++
+                Análisis empírico: (poco recomendado)
+                • Requiere tener el código y ejecutarlo.
+                • La ejecución del programa se mide en unidades de tiempo.
+                • Se mide solo sobre una colección de entradas particulares.
+                • Lo que se mide depende de la computadora, el sistema operativo y el compilador, es decir depende de una implementación particular.
+                **Análisis teórico: **
+                • Análisis predictivo de eficiencia integrado al proceso de desarrollo de un programa.
+                • No depende de características de implementación.
+                • Establece cotas para el tiempo de ejecución en el “peor caso”, “mejor caso” y “caso promedio”.
+                Notación matemática en las que expresamos el tiempo de ejecución:
+                • Notación Big-Oh (mas usada)
+                • Notación Big-Omega
+                • Notación Zeta
+                Fuente: Introduction to Algorithms Ed. The MIT Press. (Capitulo 3 The Growth of Function)
+- [ ]  Cierre del curso y siguientes pasos
+
+
+Opinion personal : no me gusto , casi no hay codigo por lo que tienes que visualizar el problema 
