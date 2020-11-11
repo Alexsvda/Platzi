@@ -1,0 +1,93 @@
+Bienvenida al curso 
+Problemática del desarrrollo de software profesional
+Qué es Docker: containarization vs virtualization
+        Docker Permite resolver problemas de construir, distribuir y ejecutar software en diferentes plataformas.
+        Containarization: un estándar para llevar algo dentro. Agrupadores de procesos.
+        Versátiles:
+        En el orden de los MB
+        Tienen todas las dependencias que necesitan para funcionar correctamente.
+        Funcionan igual en todos lados.
+        Eficientes:
+        Comparten archivos simultáneos con otros contenedores.
+        Solo se ejecutan procesos, no un SS.OO completo.
+        Aislados:
+        Lo que pasa en el container queda en el container.
+        No pueden alterar su entorno de ejecución (a menos que explícitamente se indique lo contrario)
+        Virtualization: es una imagen o archivo que contiene información dentro. Por lo general son pesadas de administración costosa y son lentas.
+        Pesadas:
+        En el orden de los GB
+        Muchas VMs en el mismo host suelen repetirse en lo que contienen
+        Administración costosa:
+        Una VM tiene que ser administrada como cualquier otra computadora: patching, update, etc
+        Hay que administrar la seguridad interna entre apps
+        Lentas:
+        Correr nuestro código en una VM implica no solo arrancar aplicaciones, sino también esperar el boot de la VM en sí.
+Instalación de Docker
+        Instalación en windows 10
+Primeros pasos: Hola mundo y Docker Engine
+        Realicemos nuestro primer ‘Hola Mundo’ en Docker utilizando el comando:
+        docker run hello-world
+Contenedores
+        Es la pieza fundamental de docker.
+        Es una agrupación de varios procesos. También puede ser un solo proceso.
+        Los procesos que se definen para un contenedor, solo pueden vivir en el contexto de ese contenedor.
+        Los procesos usarán los recursos que el contenedor defina.
+        Los procesos corren de forma nativa en máquinas linux, lo único que se comparte es el kernel. por eso en ambientes productivos se usa linux con docker.
+        No son máquinas virtuales.       
+Explorar el estado de docker
+        docker ps = lista los contenedores
+        docker ps -a = lista contenedores a detalles
+        docker ps -aq = lista solo los ID de los contenedores (la q significa quiet, tranquilo o silencioso)
+        docker inspect id_contenedor = detalles internos del contenedor
+        docker inspect nombre_contenedor = lo mismo que el anterior
+        docker inspect -f {{}} nombre_contenedor = filtra una variable especifico del contenedor
+        docker rm nombre_contenedor = elimina un contenedor
+        docker rm $(ps -aq) = borra TODOS los contenedores       
+El modo interactivo
+        Se puede cargar un Kernel de un linux a través de Docker 
+            docker run ubuntu (Corre ubuntu y se apaga por que no existen instruicciones ), verifica sio existe una versión de lo contrario gestiona la descarga de una versión ultima 
+            docker run -it ubuntu (corre ubuntu de manera interactiva)
+Ciclo de vida de un Contenedor 
+        Docker run ubntu tail -f /dev/null
+        docker run ubuntu tail -f /dev/null —> Para no ejecutar el comando por defecto, le podemos decir que se ejecute y no se apague. La terminal se queda congelada.
+        Abrir otra terminal
+        docker ps —> para obtener nombre
+        docker exec -it <nombre contenedor> bash —> Exec es para ejecutar un comando en un contenedor existente. -it para que sea de forma interactiva.
+        ps —> En linux se pueden ver los procesos con ps, solo los de mi sesión.
+        ps -fea —> Para ver procesos de todas las sesiones. Docker siempre por defecto le asigna el PID (ID del proceso) 1 al comando que corre con el contenedor, ahi esta la clave de cuando se apaga el contenedor. Todo contenedor tiene un root COMMAND, cuando haga exit se va apagar el contenedor.
+        exit —> Salir del contenedor. Puedo hacer 2 cosas:
+        docker rm -f <nombre contenedor> Elima brutalmente el contenedor. El -f significa “Si esta corriendo no me importa”
+        docker kill <nombre contenedor> Manda una señal de matar el proceso.
+        Si un contenedor se apaga es porque hubo un error en el proceso rut e hizo exit o terminó de hacer lo que tenia que hacer.
+Exponiendo contenedores al mundo exterior
+        docker run -de --name server nginx 
+        ID unico a8d17f6b6da2389b875e1162377e63ad7d2f45156d07edd0c7da31e468f3caab
+        docker run -d --name server -p[Publicar] 8080:80 nginx
+Datos en Docker
+        docker run -d --name db mongo       
+        docker exec -it db bash (Para interactuar con los datos)
+        bash  
+           mongo (para iniciar desde el bash la data base)
+Datos en docker : Volume
+        docker run -d --name db --mount src=dbdata,dst=/data/db mongo
+Conceptos fundamentales de docker: imagenes
+        Las imágenes son un componente fundamental de Docker y sin ellas los contenedores no tendrían sentido. Estas imágenes son fundamentalmente plantillas o templates.
+        Algo que debemos tener en cuenta es que las imágenes no van a cambiar, es decir, una vez este realizada no la podremos cambiar.
+        Cada capa es una pequeña diferencia con la anterior, funciona algo similar a git.
+        Traer una imagen
+        docker pull <repositorio>:<versión>
+        Listar imágenes
+        Este comando nos muestra el repositorio al que pertenece, su tag, la versión, su id, la fecha de creación y su peso.
+        docker image ls
+        Eliminar una imágen
+        docker image rm <nombre>
+        Las imágenes al componerse de capas, conforme las versiones de una imagen progresen lo único que bajara docker serán las capas nuevas.
+        Si una capa existe en nuestro sistema no la baja.
+        Si creamos una imagen nueva con capas que ya existen, docker solo crea una referencia lógica a estas capas. 
+Comprendiendo sistema de Capas 
+        Para comprender la estructura de sus capas podemos verlo desde el archivo Dockerfile. En hub.docker.com podemos ver éste archivo de las imágenes públicas.
+        Con el comando: docker history nombreImagen -> podemos ver información acerca de las capas de la imagen.
+        Con el flag “–no-trunc” del comando history podemos ver más detalles pero no es muy cómodo para ver la información.
+        Opción cómoda: https://github.com/wagoodman/dive
+        Las capas de docker son inmutables, cada cambio en la imagen se trata como una capa nueva.
+Usando docker para desarrollar aplicaciones

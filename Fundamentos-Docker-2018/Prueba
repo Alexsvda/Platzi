@@ -1,0 +1,111 @@
+1 (OK)
+La parte del filesystem que coincide con las reglas en un .dockerignore: 
+docker las escluye 
+2(no) (OK)
+Indica la descripción más correcta de qué hace docker al ejecutar la línea docker run -p 3000:80 nginx 
+a cierra dicho proceso antes de proceder
+b solo si no hay otro proceso usando el puerto 3000
+3 (OK)
+Cada instrucción en un Dockerfile, al momento de construir la imagen, genera una nueva capa en la imagen resultante.
+verdadero 
+4 (no)(OK)
+La principal diferencia entre bind mounts y docker volumes es: 
+a cuando usamos bind mounts, los archivos viven tanto en el contenedor como en la maquina anfritiona cuando usamos docker volumenes viven solo en el contenedor 
+b están siempre en un área manejada por docker 
+5(no) (OK)
+No es posible construir imágenes desde docker-compose, es necesario siempre hacer docker build antes de ejecutar un compose file.
+verdadero
+falso
+6 (no) (no) (no)
+Al montar el filesystem de la máquina anfitriona en un contenedor con la línea docker run -v /path/en/host:/path/en/contenedor ubuntu, el efecto logrado es: 
+b no se veran reflejados en el contenedor 
+c si se veran reflejados en el contenedor 
+a inmediatamente reflejado en el otro 
+7 (no)(OK)
+El comando para crear una imagen usando un Dockerfile es 
+docker run 
+docker build 
+8 (OK)
+El requisito para que un contenedor pueda conectarse a una red existente es que la red haya sido creada con la opción --attachable 
+Verdadero
+9 (OK)
+Que un contenedor exponga un puerto es suficiente para que reciba conexiones desde el exterior. (OK)
+falso
+10 (no) colocar falso en la siguiente 
+En docker compose, los contenedores se llaman servicios y la relación es siempre 1 a 1 
+Verdadero
+falso
+11 (no)(no) se mareo? prueba falso nuevamente en la siguiente 
+La principal diferencia entre un contenedor y una máquina virtual es que las máquinas virtuales no necesitan de un sistema operativo en la máquina anfitriona. 
+Falso
+verdadero 
+12 (no) se mareo? prueba otra opcion o verifica si no hay dos con la misma terminación
+Indica la descripción más correcta de qué hace la opción -it en docker run 
+b control sobre ella 
+c crea y ejecuta un contenedor asignando el standar input 
+13 (OK)
+Indica la descripción más correcta de qué es un contenedor
+b aislados del resto del sistema
+14 (OK)
+El nombre (repositorio:tag) de una imagen es: 
+b una referencia a la ultima capa 
+15 (OK)
+El comando para ejecutar un nuevo comando dentro de un contenedor de docker es: 
+Docker exec 
+16 (no)(OK)
+Si un servicio app tiene el atributo depends_on: db lo que hace compose es: 
+c cuando terminan su ejecución
+b inicializa el servicio APP cuando los contenedores de DB comienzan a ejecutarse 
+17 (no) (OK)
+La imagen especificada en el FROM de un Dockerfile es siempre una sóla capa en la imagen final. 
+Verdadero
+falso
+18 (OK)
+Al usar el docker client dentro de un contenedor que tiene montado el socket del docker daemon de la máquina anfitriona, todos los contenedores e imagenes que utilicemos existen dentro del contenedor en el que estamos, sin modificar el estado de docker de la máquina anfitriona.
+Falso
+19 (no) (no) se maereo?, prueba con verdadero en la siguiente nuevamente 
+Los contenedores de todos los servicios creados mediante un mismo docker-compose se pueden ver entre sí siempre que no se especifique una configuración de networking que explícitamente impida hacerlo.
+Verdadero
+Falso
+verdadero
+20(OK)
+Cuando el proceso principal de un contenedor finaliza, dicho contenedor se detiene
+verdadero
+21(no) verifica que no existea otro con esta terminacion , salio erronea 
+El resultado final de buildear un Dockerfile multi-stage es:
+c una imagen con las capas deñ ultimo stage 
+b siempre son distintas a la de todos los otros stages
+a tampoco era
+22(no) (OK)
+Un contenedor es una máquina virtual más liviana, sin sistema operativo húesped, y que corre sus procesos aislados uno del otro.
+Verdadero
+falso 
+23 (OK)
+Las tres grandes áreas de problemáticas en el desarrollo de software profesional son:
+Construir distribuir y ejecutar
+24 (OK)
+Las imágenes de docker son contenedores que están listos para ser ejecutados
+Falso
+25 (no) (no) (no)
+El comando docker run --name prueba hello-world crea un nuevo contenedor…
+c solo si no existe la imagen helloworlds
+a sólo si no existe la imagen hello world
+b siempre y con la imagen de helloworld 
+d era esta 
+26 (no)(OK)
+El comando para ver el estado de todos nuestros contenedores de docker es:
+docker ps 
+docker ps -a
+27 (OK)
+Cuando escribes docker run hello-world y das enter, lo que ocurre es:
+b si lo logra crea y ejecuta el contenedor 
+28 (OK)
+La única forma de obtener la imagen “ubuntu:16.04” es haciendo docker pull ubuntu:16.04
+falso
+29 (no)
+El comando para ver información detallada sobre nuestra instalación de docker es:
+a docker --version
+d docker info 
+30 (OK)
+El comando para ver la información detallada de un contenedor de docker es:
+docker inspect

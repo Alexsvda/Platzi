@@ -1,0 +1,12 @@
+CURSO PROFESIONAL DE DevOps
+1 Introduccion y filosofia de DevOps
+2 Ambientes Homogéneos para Applicaciones
+    Una de las maneras de resolver el ““it works in my machine”” es teniendo homogeneidad en todos los ambientes. El ejecutar código en nuestra máquina local debe parecerse lo más posible al ambiente de pruebas y producción.
+    Docker es lo recomendado, funciona para todos los sistemas operativos(WIN10 Pro solamente) y es reproducible, podemos tener una infraestructura que comparta todo. Las imágenes son reproducibles, programables y la documentación está en el mismo código.    
+    Deploy = Despliegue.
+    Deployable = Desplegable.
+    Doker (Da lo mismo la capa del sistema operativo, el container son reproducible y la documentación es el mismo código)
+3 Implementación de Doker File 
+
+    Curso Pausado por falta de conocimientos en Doker 
+    Se inicia curso de fundamentos de Doker 

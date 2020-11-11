@@ -1,0 +1,49 @@
+Bienvenida al curso
+Las tres áreas en el desarrollo de software profesiona
+    Construir - distribución - ejecutar
+    Construir: escribir codigo es solo una pequeña parte 
+                entorno de desarrollo
+                dependencia
+                entorno de ejecución 
+                equivalecia 
+                servicios externos 
+    Distribuir: tu codigo tiene qe transformarse en un artefacto, o varios, que puedan ser transportados a donde tengan que ser ejecutados
+                divergencia de repositorios 
+                divergencia de artefactos 
+                versionado
+    Ejecutar: la maquina donde se escribe el software siempre es distinta a la maquina donde se ejecuta de manera productiva 
+                compatibilidad con el entorno productivo
+                dependencias
+                disponibilidad de servicios externos 
+                recursos de hardware 
+Virtualización 
+    la forma que tiene la industria de software para solucionar los problemas anteriores 
+    permite atacar en simultaneo los tres grandes problemas del desarrollo de software profesional
+    tres grandes areas de problemas de virtualización 
+        Peso : gb de almacenamiento , proceso lento
+        Costo de administración: Linux windows , how to much 
+        multiples formatos : VDI,VMDK,VHD,raw,etc. lento inicio de maquina
+    Docker elimina los problemas con los contenedores 
+    Containezacion: empleo de contenedores para        construir y desplegar software 
+        contenedores:   flexibles 
+                        livianos
+                        portables 
+                        bajo acoplamiento
+                        escalable 
+                        seguros
+Preparando entorno de Trabajo
+     docker nativamente funciona en linux, en otros sistemas operativos funciona una VM oculta 
+play with docker 
+    interfaz de 4 horas para trabajar
+Qué es y como funciona Docker 
+    plataforma que permite construir ejecutar y compartir aplicaciones mediante contenedores 
+    docker deamon : corazon docker : interactua con el sistema operativo 
+    rest 
+        apes 432//SDAM-93
+    D8:     
+ear war.jar
+
+    Actualizar q1a
+fuente de produccion = equipo ingenieria 
+
+            

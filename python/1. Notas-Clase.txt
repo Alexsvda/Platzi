@@ -1,0 +1,28 @@
+CURSO PYTHON
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10. Estructura de condicionales en Python
+    Uno de las cosas más poderosas en programación es controlar el flujo de ejecución, para esto utilizamos condicionales.
+    Las condicionales son sentencias que devuelven un valor booleano (True, False)
+    Podemos utilizar:
+        Operadores relacionales:
+            == Es igual
+            != Es diferente
+            > Es mayor
+            >= Es mayor o igual
+            < Es menor
+            <= Es menor o igual
+        Operadores lógicos:
+            and
+            or
+            not
+11. Calcular si un número es primo con Python
+    

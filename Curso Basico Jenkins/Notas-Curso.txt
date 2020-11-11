@@ -1,0 +1,85 @@
+Introducción a Automatización
+    Automatizamos porque nos deja reproducir procesos y nos otorga mayor productividad, si los corremos manualmente podemos aburrirnos lo que nos lleva a saltarnos pasos y a generar errores. Por eso los automatizamos y podemos pasar más tiempo haciendo código, implementando nuevos features.
+    Podemos automatizar correr pruebas, correr deployments, la verificación de la disponibilidad de nuestro sitio, podemos verificar cualquier cosa.
+Introducción a Jenkins 
+    Caracteristicas
+    Es Open Source
+    Escrito en java sobre JVM
+    Mayormente se corre en Linux
+    Es extensible
+    Se puede escribir plugins en java
+    La comunidad aporta tanto escribiendo un sin fin de Plugins.
+    Jenkins es amigable y flexible por la cantidad de comunidad que tiene.
+    Compañias enormes tiene un solo jenkins
+    Jenkins puede crecer horizontalmente añadiendo mas hadware ya que soporta esto con el termino slaves.
+    Jenkins es un servicio de automatización.
+    CircleCI realiza lo mismo que jenkins.
+    Actualmente se puede escribir tu job con codigo y no solo con la interfaz.
+Instalación y Configuración Básica de Jenkins
+    Instalación en windows 10
+Manejo de usuarios 
+    Se pueden crear nuevos usuarios y asignarles diferentes permisos, esto con el fin de poder saber en todo momento, o auditorías quien hizo que…
+    Lo ideal es no compartir mismos usuarios ni misma contraseña.
+    La autenticación se puede dar por medio de login con Github o Google, esto con el uso de plugins.
+    Para crear, eliminar, editar un usuario:
+        Ir a Manage Jenkins/ Manage Users/ Create user (en caso de crear). Para editar o borrar solo se debe dar clic en user id deseado, después elegir opción Configurar o Borrar  
+Que es un Job 
+    un Job es un espacio de trabjo en donde se ejecutan procesos ya sea por codigo o por secuencia 
+    en windows se debe modificar parametros para que estos se ejecuten de manera correcta 
+Configuración de Job 
+     Discard old build  
+        Como las cosas de los jobs se quedan en el disco duro en algun momento se va a llenar, ésta opcion es una manera de impedir que eso pase. Si se marca tiene varios opciones:
+        Dias: se puede decir que quiero tener este build por ‘X’ dias, por ejemplo 365 dias (un año).
+        Numero de builds a guardar: Tambien puedo decir 'quiero guardar los ultimos 2 bulilds"
+    This project is parameterized 
+        Se le puede pasar parametros al build. Por ejemplo un string parameter
+    Disable this project 
+        Si algo sale mal en un job y no quieres que nadie lo corra, se marca la cajita y el job no va a correr.
+    Source Code Management
+        Se puede elegir entre diferentes versionadores de codigo como subervsion o git
+    Build Triggers
+    Remotely
+        A travez de una API
+    After other projects are built
+        Si termino de ejecutar job A quiero ejecutar job B unicamente si job A fue estable Periodicamente
+        Recibe la sintaxis de un cron, se puede ejecutar cronologicamente
+    Github hook trigger for GITScm polling
+        Cuando se haga un pus en githu el job se va a ejecutar
+    Bulid Environment
+    Delete workspace before build starts
+        Si tu corres el job y modificas el workspace, por ejemplo creas un archivo, la proxima vez que se ejecute, a a estar ahí, a menos que especifiques ésta opcion para eliminar el workspace
+    Use secret text(s) or file(s)
+        Añadir secretos, algo que no deberia estar expuesto a otros usuarios, esto te permite guardarlo y accesarlo a travez del script pero no va a estar expuesto a los ojos de otras personas, solo jenkins lo va a ver.
+    Abort the build if it’s stuck
+        Puede llegar el caso en el que el job nunca termino, por cualquier motivo que sea, es ideal que no se quede atorado, que falle. Entonces podemos deir que si no ha terminado en 3 minutos que se cancele el build y falle.
+    Add timestamp to the console output   
+¿Cómo Jenkins interactúa con su máquina local?
+    solo ocupa las herramientas que esta en el equipo 
+    jenkins puede instalar binarios 
+Jenkins y su ecosistema de Plugins 
+    se pueden descargar multiples plugins acorde a tus necesidades (Hay para todo)
+    de preferencia siempre se descargar y luego se resetea por buenas practitas esto permite terminar todos los job antes de continuar 
+    despues de la configuracion se pueden ir probando y verificadno los cambios en los plugins y el global configuration 
+Cadenas de Jobs 
+Conectandonos a GitHub 
+    Es posible conectar un repositorio de GitHub a Jenkins para que cada vez que exista un push se haga un build del source code. Para que esto sea posible debemos realizar cambios tanto en Jenkins como en GitHub.
+    Jenkins
+        1- Debemos tener el GitHub plugin instalado
+        2- Al crear el Job, debemos marcar el SCM la opción de Git, y pegar la URL del repo. (Para esta acción el host de Jenkins debe tener instalado Git)
+        3- En el apartado "branches to build" si dejamos en blanco tomara en cuenta cualquier branch. 
+        4- En "Build Triggers" debemos marcar la opción "GitHub hook trigger for GITScm polling"
+    GitHub:
+        1- Vamos al repo de GitHub.
+        2- Entramos en Settings -> Webhooks.
+        3- Añadimos un nuevo Webhook.
+        4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.)
+        5- Marcar "Just the push event"
+Que es un pipeline
+    Pipelines nos permiten configurar nuestros Jobs con código en lugar de hacerlo en la interfaz visual. En Jenkins los hay de dos maneras: Scripting y Declarative.
+Como puedo acelerar mi development de pipeline 
+    pipeline syntraxis para hacer lineas de codigos completas 
+Introduccion a Slaves     
+    Los Slaves nos permiten correr Jobs distribuidamente. Se conecta al Jenkins master y este le delega trabajos al Slave como si fuese otra máquina puede ser virtual, física como quieras hacerlo, nos permite escalar horizontalmente.
+Conectado un Slave
+    https://github.com/elbuo8/platzi-scripts.
+    
